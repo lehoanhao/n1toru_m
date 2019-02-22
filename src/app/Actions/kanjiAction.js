@@ -36,7 +36,6 @@ export const getDataListKanji = (currentPage) => {
   return dispatch => {
     dispatch(startGetData())
     kanjiApi.getListKanji(JlptLevel.N1, currentPage, (resJson) => {
-      console.log(resJson)
       dispatch(setCurrentPageKanjiData(resJson))
     })
     kanjiApi.getListKanji(JlptLevel.N1, page.prePage, (resJson) => {

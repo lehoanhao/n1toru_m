@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as Animatable from 'react-native-animatable';
+import { TouchableOpacity, Alert } from 'react-native'
 import { ScrollView, StyleSheet, Image, Dimensions, Platform } from 'react-native';
 import { Container, List, Content, View, DeckSwiper, Card, CardItem, Thumbnail, Text, Left, Body, Icon, Spinner } from 'native-base';
 import KanjiCard from '../../Components/KanjiCard';
@@ -30,13 +31,17 @@ class HomeScreen extends Component {
     this.props.prePage(page.prePage)
     //this.view.zoomInUp(800)
   }
-  handleViewRef = ref => this.view = ref;
+  handleKanjiCardPress(){
+    console.log("press oke")
+  }
+
+  handleViewRef = ref => this.view = ref
 
   render() {
     let { currentPageData, nextPageData, currentPageNumber, isLoadingData, flagSwider } = this.props
     return (
       <Container style={styles.container}>
-        <Animatable.View ref={this.handleViewRef}>
+        <View >
           <DeckSwiper
             dataSource={[0]}
             onSwipeLeft={this.handleSwipeLeft}
@@ -48,9 +53,15 @@ class HomeScreen extends Component {
                     {
                       !isLoadingData && currentPageData != null ? currentPageData.map(function (val, index) {
                         return (
-                          <View key={index} style={{ width: '25%', height: 'auto', paddingLeft: 5, paddingRight: 5 }}>
-                            <KanjiCard kanji={val.value.kanji} />
-                          </View>
+                          <Animatable.View ref={this.handleViewRef} key={index} style={{ width: '25%', height: 'auto', padding: 2 }}>
+                            <TouchableOpacity onPress={() => {
+                              
+                              Alert.alert(val.value.kanji, val.value.mean)
+                              // this.props.navigation.navigate("KanjiDetail")
+                            }}>
+                              <KanjiCard kanji={val.value.kanji} />
+                            </TouchableOpacity>
+                          </Animatable.View>
 
                         );
                       }) : (
@@ -65,12 +76,11 @@ class HomeScreen extends Component {
               </View>
             }
           />
-        </Animatable.View>
+        </View>
       </Container>
     );
   }
 }
-
 const styles = StyleSheet.create({
   bodySwiper: {
     backgroundColor: 'white'
@@ -81,10 +91,10 @@ const styles = StyleSheet.create({
   scrollView: {
     height: (Platform.OS === 'ios') ? height - (140 + 30) : height - 140,
     width: '100%',
-    padding: 10
+    padding: 10,
   },
-  loading:{
-    paddingTop: height/2 - 100
+  loading: {
+    paddingTop: height / 2 - 100
   }
 })
 

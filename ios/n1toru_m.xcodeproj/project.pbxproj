@@ -5,7 +5,6 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
 		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
@@ -59,6 +58,8 @@
 		F04902A5BDB04A06A8F4201E /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5B3483A7A6554E24929DE624 /* FontAwesome.ttf */; };
 		F4DCB524EC9A4921B0BC185E /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6EB930A96FB24799A5EECFA1 /* Foundation.ttf */; };
 		F859A2CA1D5F47C791804362 /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1FBE14BF632748FA8100A903 /* MaterialCommunityIcons.ttf */; };
+		D61AFD09594E4F2E9443E57A /* XANO-mincho-U32.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 12E82F660757483281AD5E25 /* XANO-mincho-U32.ttf */; };
+		FC3869E6FB574621AB386809 /* XANO.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DA0431176A544E8AA44669C9 /* XANO.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -393,6 +394,8 @@
 		E612328A0EE04CCAB8F7FA3E /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/native-base/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
+		12E82F660757483281AD5E25 /* XANO-mincho-U32.ttf */ = {isa = PBXFileReference; name = "XANO-mincho-U32.ttf"; path = "../src/app/Assets/fonts/XANO-mincho-U32.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		DA0431176A544E8AA44669C9 /* XANO.ttf */ = {isa = PBXFileReference; name = "XANO.ttf"; path = "../src/app/Assets/fonts/XANO.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -599,6 +602,8 @@
 				B3A68D0AEA194E1BB6B7D577 /* rubicon-icon-font.ttf */,
 				CBD916A43E5B4C5A9F8B2506 /* SimpleLineIcons.ttf */,
 				57DE34D9196F416FA2CCA19C /* Zocial.ttf */,
+				12E82F660757483281AD5E25 /* XANO-mincho-U32.ttf */,
+				DA0431176A544E8AA44669C9 /* XANO.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -1181,6 +1186,8 @@
 				52BBB0A08D3A4F8491D12C49 /* rubicon-icon-font.ttf in Resources */,
 				8259A71F25384AB38EB605A8 /* SimpleLineIcons.ttf in Resources */,
 				E2D130CF0C4F4EA38794298E /* Zocial.ttf in Resources */,
+				D61AFD09594E4F2E9443E57A /* XANO-mincho-U32.ttf in Resources */,
+				FC3869E6FB574621AB386809 /* XANO.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,7 +8,7 @@ class KanjiCard extends Component {
 
   render() {
     return (
-      <Card style={{alignContent: 'center'}}>
+      <Card style={{alignContent: 'center', padding: 0}}>
         <CardItem>
           <Body>
             <Text style={{alignSelf: 'center', fontSize: 50}}>{this.props.kanji}</Text>
